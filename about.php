@@ -151,5 +151,6 @@ session_start();
         and enjoyable online shopping experience for everyone.
     </p>
 </div>
-
-<?php include('includes/footer.php'); ?>
+ 
+<?php include('includes/footer.php'); 
+?>
