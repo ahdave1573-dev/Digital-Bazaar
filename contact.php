@@ -149,4 +149,5 @@ if(isset($_POST['send_message'])){
 
 </div>
 
-<?php include('includes/footer.php'); ?>
+<?php include('includes/footer.php'); 
+?>
