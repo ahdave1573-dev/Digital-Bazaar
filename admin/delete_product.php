@@ -1,6 +1,6 @@
 <?php
-include("../config/auth.php");
-include("../config/db.php");
+include("../auth.php");
+include("../db.php");
 
 // 1. Check if ID exists
 if(!isset($_GET['id'])){

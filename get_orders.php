@@ -4,7 +4,7 @@ error_reporting(0);
 ini_set('display_errors', 0);
 header('Content-Type: application/json; charset=utf-8');
 
-include 'db_connect.php';
+include 'db.php';
 
 // 2. બધા ઓર્ડર લાવો (છેલ્લો ઓર્ડર પહેલા - DESC)
 $sql = "SELECT * FROM orders ORDER BY id DESC";

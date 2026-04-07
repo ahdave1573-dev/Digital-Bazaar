@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 /* 📦 DATABASE */
-include('config/db.php');
+include('db.php');
 include('includes/header.php');
 
 $user_id = $_SESSION['user_id'];

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('includes/header.php'); 
-include('config/db.php');
+include('db.php');
 
 /* ================= AUTH & CART CHECK ================= */
 if (!isset($_SESSION['user_id'])) {

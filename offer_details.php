@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("config/db.php");
+include("db.php");
 include("includes/header.php");
 
 // 1. Check if ID exists in URL

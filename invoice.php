@@ -3,35 +3,24 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 session_start();
-// include('config/db.php'); // Un-comment this in your actual code
-// Simulation for testing without DB (Remove this block when using real DB)
-$conn = true; 
-$order_id = $_GET['order_id'] ?? 'ORD-DEMO';
-$order = [
-    'payment_method' => 'UPI',
-    'created_at' => date('Y-m-d H:i:s'),
-    'order_status' => 'success',
-    'user_name' => 'Anshul Dave',
-    'user_email' => 'ahdave1573@gmail.com'
-];
-// End simulation
+include('db.php');
 
 /* ================= CHECK ORDER ID ================= */
 if (!isset($_GET['order_id'])) {
-    // die("Invalid Order ID"); // Uncomment in production
+    die("Invalid Order ID");
 }
 
-// $order_id = mysqli_real_escape_string($conn, $_GET['order_id']);
+$order_id = mysqli_real_escape_string($conn, $_GET['order_id']);
 
 /* ================= FETCH ORDER ================= */
-// $order_q = mysqli_query($conn, "SELECT * FROM orders WHERE order_id='$order_id' LIMIT 1");
-// if (!$order_q || mysqli_num_rows($order_q) == 0) {
-//     die("Order Not Found");
-// }
-// $order = mysqli_fetch_assoc($order_q);
+$order_q = mysqli_query($conn, "SELECT * FROM orders WHERE order_id='$order_id' LIMIT 1");
+if (!$order_q || mysqli_num_rows($order_q) == 0) {
+    die("Order Not Found");
+}
+$order = mysqli_fetch_assoc($order_q);
 
 /* ================= FETCH ORDER ITEMS ================= */
-// $item_q = ... (Your DB Logic)
+$item_q = mysqli_query($conn, "SELECT * FROM order_items WHERE order_id='$order_id'");
 
 /* ================= PAYMENT METHOD (DB BASED) ================= */
 $method = strtoupper(trim($order['payment_method']));
@@ -316,35 +305,22 @@ $user_email = $order['user_email'] ?? ($_SESSION['user_email'] ?? 'N/A');
             $i = 1;
             $grand = 0;
 
-            // FAKE DATA FOR DISPLAY (Remove this in your real code and uncomment DB loop below)
-            // Start Fake Data
-            $fake_items = [
-                ['product_name' => 'JBL Tune 770NC Wireless', 'category_name' => 'Accessories', 'price' => 5400, 'quantity' => 1]
-            ];
-            foreach ($fake_items as $row) {
-                 $total = $row['price'] * $row['quantity'];
-                 $grand += $total;
-            // End Fake Data
-
-            // UNCOMMENT THIS IN REAL CODE:
-            /*
             if ($item_q && mysqli_num_rows($item_q) > 0) {
                 while ($row = mysqli_fetch_assoc($item_q)) {
                     $total = $row['price'] * $row['quantity'];
                     $grand += $total;
-            */
             ?>
             <tr>
                 <td style="color: #9ca3af;"><?= str_pad($i++, 2, '0', STR_PAD_LEFT) ?></td>
                 <td style="font-weight: 500;"><?= htmlspecialchars($row['product_name']) ?></td>
-                <td style="color: #6b7280; font-size: 13px;"><?= htmlspecialchars($row['category_name']) ?></td>
+                <td style="color: #6b7280; font-size: 13px;"><?= htmlspecialchars($row['category']) ?></td>
                 <td class="right">₹<?= number_format($row['price']) ?></td>
                 <td class="center"><?= $row['quantity'] ?></td>
                 <td class="right" style="font-weight: 600;">₹<?= number_format($total) ?></td>
             </tr>
             <?php 
                 } 
-            // } // Close DB if
+            } // Close DB if
             ?>
 
             <tr class="total-row">

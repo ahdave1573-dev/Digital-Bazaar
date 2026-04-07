@@ -1,6 +1,6 @@
 <?php
-include("../config/auth.php");
-include("../config/db.php");
+include("../auth.php");
+include("../db.php");
 
 /* ===== UPDATE ORDER STATUS ===== */
 if (isset($_POST['update_status'])) {
@@ -165,6 +165,7 @@ button[name="update_status"]:hover { background: #4338ca; transform: translateY(
 <div class="sidebar">
     <a href="dashboard.php" title="Dashboard"><span>📊</span> &nbsp; Dashboard</a>
     <a href="products.php" title="Products"><span>📦</span> &nbsp; Products</a>
+    <a href="manage_offers.php" title="Offers"><span>🎁</span> &nbsp; Offers</a>
     <a href="orders.php" class="active" title="Orders"><span>🛒</span> &nbsp; Orders</a>
     <a href="users.php" title="Users"><span>👥</span> &nbsp; Users</a>
     <a href="contactus.php" title="Messages"><span>📩</span> &nbsp; Messages</a>

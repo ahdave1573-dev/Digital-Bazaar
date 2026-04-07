@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('config/db.php');
+include('db.php');
 
 // 1. If already logged in, redirect to home
 if(isset($_SESSION['user_id'])){

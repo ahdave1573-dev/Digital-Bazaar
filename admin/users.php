@@ -1,6 +1,6 @@
 <?php
-include("../config/auth.php");   // Admin Check
-include("../config/db.php");
+include("../auth.php");   // Admin Check
+include("../db.php");
 
 /* ===== DELETE USER ===== */
 if(isset($_GET['delete'])){
@@ -166,6 +166,7 @@ tr:hover {
 <div class="sidebar">
     <a href="dashboard.php" title="Dashboard"><span>📊</span> &nbsp; Dashboard</a>
     <a href="products.php" title="Products"><span>📦</span> &nbsp; Products</a>
+    <a href="manage_offers.php" title="Offers"><span>🎁</span> &nbsp; Offers</a>
     <a href="orders.php" title="Orders"><span>🛒</span> &nbsp; Orders</a>
     <a href="users.php" class="active" title="Users"><span>👥</span> &nbsp; Users</a>
     <a href="contactus.php" title="Messages"><span>📩</span> &nbsp; Messages</a>

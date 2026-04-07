@@ -1,5 +1,5 @@
 <?php
-include('config/db.php');
+include("db.php");
 $res = mysqli_query($conn, "SHOW TABLES LIKE 'cart'");
 if(mysqli_num_rows($res) > 0) {
     echo "cart table exists\n";

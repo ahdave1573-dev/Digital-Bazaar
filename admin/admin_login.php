@@ -6,11 +6,7 @@ $message = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Database Connection
-    $conn = new mysqli("localhost","root","","digitalbazaar");
-
-    if ($conn->connect_error){
-        die("DB Failed: ".$conn->connect_error);
-    }
+    include("../db.php");
 
     $username = $_POST['username'];
     $password = $_POST['password'];

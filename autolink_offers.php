@@ -1,5 +1,5 @@
 <?php
-include('config/db.php');
+include("db.php");
 
 $offers = mysqli_query($conn, "SELECT id, title FROM offers WHERE product_id IS NULL OR product_id = 0");
 $count = 0;

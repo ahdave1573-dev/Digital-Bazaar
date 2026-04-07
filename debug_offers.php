@@ -1,5 +1,5 @@
 <?php
-include("config/db.php");
+include("db.php");
 
 $offers = mysqli_query($conn, "SELECT id, title, image FROM offers LIMIT 5");
 

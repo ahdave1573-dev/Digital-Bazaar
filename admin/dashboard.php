@@ -1,6 +1,6 @@
 <?php
-include("../config/auth.php");
-include("../config/db.php");
+include("../auth.php");
+include("../db.php");
 
 
 /* ================= SAFE COUNT FUNCTION ================= */
@@ -14,11 +14,11 @@ function getCount($conn, $sql){
 }
 
 /* ================= DASHBOARD COUNTS ================= */
-$total_products = getCount($conn, "SELECT COUNT(*) AS total FROM products");
-$total_orders   = getCount($conn, "SELECT COUNT(*) AS total FROM orders");
 $total_users    = getCount($conn, "SELECT COUNT(*) AS total FROM users");
 $total_messages = getCount($conn, "SELECT COUNT(*) AS total FROM contact_messages");
 $total_offers   = getCount($conn, "SELECT COUNT(*) AS total FROM offers");
+$total_products = getCount($conn, "SELECT COUNT(*) AS total FROM products");
+$total_orders   = getCount($conn, "SELECT COUNT(*) AS total FROM orders");
 ?>
 
 <!DOCTYPE html>
@@ -233,6 +233,7 @@ h2 {
 <div class="sidebar">
     <a href="dashboard.php" class="active" title="Dashboard"><span>📊</span> &nbsp; Dashboard</a>
     <a href="products.php" title="Products"><span>📦</span> &nbsp; Products</a>
+    <a href="manage_offers.php" title="Offers"><span>🎁</span> &nbsp; Offers</a>
     <a href="orders.php" title="Orders"><span>🛒</span> &nbsp; Orders</a>
     <a href="users.php" title="Users"><span>👥</span> &nbsp; Users</a>
     <a href="contactus.php" title="Messages"><span>📩</span> &nbsp; Messages</a>

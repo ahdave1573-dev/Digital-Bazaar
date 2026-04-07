@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('config/db.php');
+include('db.php');
 
 // ===== AUTH CHECK =====
 if (!isset($_SESSION['user_id'])) {

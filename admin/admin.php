@@ -1,6 +1,6 @@
 <?php
-include("../config/auth.php");
-include("../config/db.php");
+include("../auth.php");
+include("../db.php");
 
 /* ================= SAFE COUNT FUNCTION ================= */
 function getCount($conn, $sql){
