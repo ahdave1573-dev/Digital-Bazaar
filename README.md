@@ -86,7 +86,7 @@ Before getting started, make sure you have the following installed:
 **1. Clone or Download the Project**
 
 ```bash
-git clone https://github.com/your-username/digital-bazaar.git
+git clone https://github.com/ahdave1573-dev/Digital-Bazaar.git
 ```
 
 Or download the ZIP and extract it.
@@ -195,7 +195,7 @@ Contributions are welcome! Here's how you can help:
 2. **Create** your feature branch (`git checkout -b feature/AmazingFeature`)
 3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
 4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
+5. **Open** a Pull Request on [github.com/ahdave1573-dev/Digital-Bazaar](https://github.com/ahdave1573-dev/Digital-Bazaar)
 
 ---
 
@@ -207,7 +207,9 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ## 📬 Contact
 
-Have questions or suggestions? Feel free to open an [issue](https://github.com/your-username/digital-bazaar/issues) or reach out directly.
+Have questions or suggestions? Feel free to open an [issue](https://github.com/ahdave1573-dev/Digital-Bazaar/issues) or reach out via email at [ahdave1573@gmail.com](mailto:ahdave1573@gmail.com).
+
+🔗 **GitHub Profile:** [github.com/ahdave1573-dev](https://github.com/ahdave1573-dev)
 
 ---
 
@@ -215,6 +217,6 @@ Have questions or suggestions? Feel free to open an [issue](https://github.com/y
 
 Made with ❤️ using PHP & MySQL
 
-⭐ **Star this repo** if you found it helpful!
+⭐ **[Star this repo](https://github.com/ahdave1573-dev/Digital-Bazaar)** if you found it helpful!
 
 </div>
